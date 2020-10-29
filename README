@@ -1,0 +1,17 @@
+Target the desired CF org/space by logging on to Cloud Foundry via the CLI:
+cf login
+
+Create services on CF:
+From approuter folder run the following commands:
+cf create-service xsuaa application nodemod-uaa -c xs-security.json
+cf create-service html5-apps-repo app-runtime nodemod-repo-runtime
+cf create-service destination lite nodemod-dest
+
+Build:
+Run npm script build from project root folder
+npm run build
+
+CF CLI deployment:
+navigate to mta_archives folder
+Run the command replacing x.x.x with the actual mtar filename:
+cf deploy nodemod_x.x.x.mtar
