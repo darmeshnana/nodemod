@@ -1,0 +1,13 @@
+{
+    "xsappname"   : "template-studio-approuter",
+    "tenant-mode" : "dedicated",
+    "role-templates": [
+      {
+        "name": "Token_Exchange",
+        "description": "UAA",
+        "scope-references": [
+          "uaa.user"
+        ]
+      }
+    ]
+  }

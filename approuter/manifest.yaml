@@ -1,0 +1,19 @@
+applications:
+- name: nodemod-approuter
+  host: d41b9201trial-nodemod
+  memory: 256M
+
+  services:
+    - nodemod-uaa
+    - nodemod-repo-runtime
+    - nodemod-dest
+
+env:
+   destinations: >
+            [
+              {
+                "name":"test_approuter_be",
+                "url":"https://d41b9201trial-nodemod-backend.cfapps.eu10.hana.ondemand.com",
+                "forwardAuthToken": true
+              }
+            ]

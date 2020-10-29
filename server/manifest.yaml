@@ -1,0 +1,7 @@
+applications:
+- name: nodemod-backend
+  host: d41b9201trial-nodemod-backend
+  memory: 128M
+
+  services:
+    - nodemod-uaa

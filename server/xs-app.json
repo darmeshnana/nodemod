@@ -1,0 +1,12 @@
+{
+    "authenticationMethod": "route",
+    "routes": [
+      {
+        "source": "^/be(.*)$",
+        "target": "$1",
+        "destination": "test_approuter_be",
+        "authenticationType": "xsuaa"
+      }
+  
+    ]
+  }

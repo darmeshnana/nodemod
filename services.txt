@@ -1,0 +1,4 @@
+From approuter folder:
+cf create-service xsuaa application nodemod-uaa -c xs-security.json
+cf create-service html5-apps-repo app-runtime nodemod-repo-runtime
+cf create-service destination lite nodemod-dest
