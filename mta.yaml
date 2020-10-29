@@ -1,3 +1,4 @@
+ID: nodemod
 _schema-version: "2.1"
 version: 1.0.0
 modules:
@@ -9,14 +10,14 @@ modules:
       memory: 128M
     requires:
       - name: nodemod-uaa
-      - name: app-runtime
+      - name: nodemod-repo-runtime
       - name: nodemod-dest
 
 resources:
   - name: nodemod-uaa
     type: org.cloudfoundry.existing-service
 
-  - name: app-runtime
+  - name: nodemod-repo-runtime
     type: org.cloudfoundry.existing-service
 
   - name: nodemod-dest
