@@ -1,23 +1,23 @@
 _schema-version: "2.1"
 version: 1.0.0
 modules:
-  - name: nodemod-approuter
+  - name: nodeMod-approuter
     type: approuter.nodejs
     path: approuter
     parameters:
       disk-quota: 128M
       memory: 128M
     requires:
-      - name: nodemod-uaa
-      - name: app-runtime
-      - name: nodemod-dest
+      - name: nodeMod_uaa
+      - name: nodeMod_html5_repo_runtime
+      - name: nodeMod_dest
 
 resources:
-  - name: nodemod-uaa
+  - name: nodeMod-uaa
     type: org.cloudfoundry.existing-service
 
-  - name: app-runtime
+  - name: nodeMod_html5_repo_runtime
     type: org.cloudfoundry.existing-service
 
-  - name: nodemod-dest
+  - name: nodeMod_dest
     type: org.cloudfoundry.existing-service
