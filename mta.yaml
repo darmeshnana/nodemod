@@ -1,8 +1,8 @@
 ID: nodemod
 _schema-version: "2.1"
-version: 1.0.0
+version: 1.0.3
 modules:
-  - name: nodeMod-approuter
+  - name: nodeMod_approuter
     type: approuter.nodejs
     path: approuter
     parameters:
@@ -12,13 +12,38 @@ modules:
       - name: nodeMod_uaa
       - name: nodeMod_html5_repo_runtime
       - name: nodeMod_dest
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build:ui --prefix ..
+
+  - name: nodeMod_backend
+    type: approuter.nodejs
+    path: server
+    parameters:
+      disk-quota: 128M
+      memory: 128M
+    requires:
+      - name: nodeMod_uaa
+      - name: nodeMod_dest
 
 resources:
   - name: nodeMod_uaa
-    type: org.cloudfoundry.existing-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: application
+      service: xsuaa
 
   - name: nodeMod_html5_repo_runtime
-    type: org.cloudfoundry.existing-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
 
   - name: nodeMod_dest
-    type: org.cloudfoundry.existing-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: lite
+      service: destination
+

@@ -1,0 +1,32 @@
+{
+	"name": "nodeMod_uimodule",
+	"version": "1.0.0",
+	"buildTimestamp": "202011161617",
+	"scmRevision": "",
+	"libraries": [
+		{
+			"name": "sap.m",
+			"version": "1.77.0",
+			"buildTimestamp": "202011161617",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.core",
+			"version": "1.77.0",
+			"buildTimestamp": "202011161617",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.77.0",
+			"buildTimestamp": "202011161617",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.77.0",
+			"buildTimestamp": "202011161617",
+			"scmRevision": ""
+		}
+	]
+}

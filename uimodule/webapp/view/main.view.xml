@@ -1,0 +1,14 @@
+<view   xmlns="sap.m"
+        controllerName="Example1.controller.main">
+    <Page   title="Example 1 - Main">
+        <content>
+        </content>
+
+        <footer>
+            <OverflowToolbar id="otbFooter">
+                <ToolbarSpacer/>
+                <Button text="Detail" press="onDetailPress"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</view>

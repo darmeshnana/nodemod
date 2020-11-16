@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(t){"use strict";return t.extend("Example1.controller.main",{onInit:function(){this.getOwnerComponent().getRouter().getRoute("main").attachMatched(this._onRouteMatched,this)},_onRouteMatched:function(t){},onDetailPress:function(t){this.getOwnerComponent().getRouter().navTo("detail",true)}})});
