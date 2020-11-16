@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "mbt build -p=cf"
+    "build": "mbt build -p=cf"
   },
   "author": "",
   "license": "ISC",
