@@ -14,7 +14,7 @@ modules:
       - name: nodeMod_dest
 
 resources:
-  - name: nodeMod-uaa
+  - name: nodeMod_uaa
     type: org.cloudfoundry.existing-service
 
   - name: nodeMod_html5_repo_runtime
