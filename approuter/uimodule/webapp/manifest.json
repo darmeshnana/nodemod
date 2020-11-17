@@ -63,7 +63,7 @@
 				}
 			},
 			"": {
-				"dataSource": "Northwind.svc",
+				"dataSource": "Northwind.svc.approuter",
 				"preload": true
 			}
 		},

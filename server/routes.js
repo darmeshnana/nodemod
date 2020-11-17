@@ -4,7 +4,7 @@ let router  = express.Router()
 // let xsenv       = require('@sap/xsenv');
 // let JWTStrategy = require('@sap/xssec').JWTStrategy;
 
-router.get('/be', function(req, res) {
+router.get('/backend', function(req, res) {
     res.setHeader('Content-Type', 'text/plain')
     res.end("Backend has been reached\n")
 })
