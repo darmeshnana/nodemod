@@ -3,10 +3,11 @@
     "authenticationMethod": "route",
     "routes": [
         {
-            "source": "^(.*)$",
+            "csrfProtection": false,
+            "source": "^/northwind/(.*)$",
             "target": "$1",
-            "service": "html5-apps-repo-rt",
+            "destination": "Northwind",
             "authenticationType": "xsuaa"
-        }
+          }
     ]
   }

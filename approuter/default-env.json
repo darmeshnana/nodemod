@@ -1,0 +1,10 @@
+{
+	"destinations": [
+		{
+			"name": "node_api",
+			"url": "http://localhost:4004",
+			"forwardAuthToken": true,
+			"strictSSL": false
+		}
+	]
+}

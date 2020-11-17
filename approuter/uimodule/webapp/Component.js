@@ -1,1 +1,1 @@
-sap.ui.define(["sap/ui/core/UIComponent"],function(t){"use strict";return t.extend("Example1.Component",{metadata:{manifest:"json"},init:function(){t.prototype.init.apply(this,arguments);this.getRouter().initialize()}})},true);
+sap.ui.define(["sap/ui/core/UIComponent"],function(t){"use strict";return t.extend("Example1.Component",{metadata:{manifest:"json"},init:function(){t.prototype.init.apply(this,arguments);this.getRouter().initialize();$.ajax({url:"../be"}).done(function(t,e,n){var i="Welcome! "+t;var a=new sap.m.Text({text:i})})}})},true);

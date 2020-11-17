@@ -10,7 +10,7 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"Northwind.svc.approuter": {
-				"uri": "/myapp/northwind/V2/Northwind/Northwind.svc/",
+				"uri": "/northwind/V2/Northwind/Northwind.svc/",
 				"type": "OData"
 			},
 			"Northwind.svc": {
@@ -63,7 +63,7 @@
 				}
 			},
 			"": {
-				"dataSource": "Northwind.svc",
+				"dataSource": "Northwind.svc.approuter",
 				"preload": true
 			}
 		},

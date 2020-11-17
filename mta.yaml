@@ -8,10 +8,22 @@ modules:
     parameters:
       disk-quota: 128M
       memory: 128M
+    properties:
+      destinations:
+        - name: UserNode_api
+          url: "http://sap.com"
+          forwardAuthToken: true      
     requires:
       - name: nodeMod_uaa
       - name: nodeMod_html5_repo_runtime
       - name: nodeMod_dest
+      - name: UserNode_api
+        group: destinations
+        properties:
+          name: UserNode_api
+          url: '~{url}'
+          forwardAuthToken: true
+
     build-parameters:
       builder: custom
       commands:
@@ -19,14 +31,16 @@ modules:
         - npm run build:ui --prefix ..
 
   - name: nodeMod_backend
-    type: approuter.nodejs
+    type: nodejs
     path: server
-    parameters:
-      disk-quota: 128M
-      memory: 128M
+    provides:
+      - name: UserNode_api
+        properties:
+          url: '${default-url}'
+    properties:
+      UAA_SERVICE_NAME: nodeMod_uaa
     requires:
-      - name: nodeMod_uaa
-      - name: nodeMod_dest
+      - name: nodeMod_uaa   
 
 resources:
   - name: nodeMod_uaa

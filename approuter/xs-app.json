@@ -5,11 +5,23 @@
     "logoutEndpoint": "/do/logout"
   },
   "routes": [
-    {
-      "source": "^/uimodule/(.*)$",
-      "target": "$1",
-      "authenticationType": "none",
-      "localDir": "uimodule/webapp"
-    }
+      {
+        "source": "^/uimodule/(.*)$",
+        "target": "$1",
+        "authenticationType": "none",
+        "localDir": "uimodule/webapp"
+      },
+      {
+        "csrfProtection": false,
+        "source": "^/northwind/(.*)$",
+        "target": "$1",
+        "destination": "Northwind",
+        "authenticationType": "xsuaa"
+      },
+      {
+        "source": "^/be",
+        "target": "/",
+        "destination": "UserNode_api"
+      }      
   ]
 }
