@@ -1,6 +1,6 @@
 ID: nodemod
 _schema-version: "2.1"
-version: 1.0.3
+version: 1.0.4
 modules:
   - name: nodeMod_approuter
     type: approuter.nodejs
