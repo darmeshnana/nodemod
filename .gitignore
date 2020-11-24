@@ -1,3 +1,5 @@
 /node_modules
 /approuter/node_modules/
 mta_archives/
+package-lock.json
+uimodule.zip
