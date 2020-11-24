@@ -33,6 +33,9 @@ modules:
   - name: nodeMod_backend
     type: nodejs
     path: server
+    parameters:
+      disk-quota: 128M
+      memory: 128M
     provides:
       - name: UserNode_api
         properties:
